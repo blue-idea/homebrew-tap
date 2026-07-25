@@ -28,7 +28,9 @@ jobs:
           brew style Casks/linkit.rb
 
       - name: Install Linkit Cask
-        run: brew install --cask ./Casks/linkit.rb
+        run: |
+          brew tap blue-idea/tap
+          brew install --cask blue-idea/tap/linkit
 
       - name: Verify installation and quarantine cleanup
         run: |
