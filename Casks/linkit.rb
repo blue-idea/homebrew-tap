@@ -6,6 +6,7 @@ cask "linkit" do
   name "Linkit"
   desc "Smart knowledge curation space with AI-assisted organization and cloud sync"
   homepage "https://github.com/blue-idea/collection"
+  depends_on :macos
 
   livecheck do
     url :url
