@@ -1,8 +1,8 @@
 cask "linkit" do
-  version "0.3.4"
-  sha256 "9ace74d71abaf6d2f2e5006a2f5e6e03a52ba7d923267ad5392c71a19b1cbe48"
+  version "0.3.5"
+  sha256 "8f836908b992039a5fcd64f466bb6c2a3fcce208d08998071624ca1ed9b9efb5"
 
-  url "https://github.com/blue-idea/linkit/releases/download/v#{version}/Linkit.zip"
+  url "https://github.com/blue-idea/linkit/releases/download/v#{version}/Linkit.dmg"
   name "Linkit"
   desc "Smart knowledge curation space with AI-assisted organization and cloud sync"
   homepage "https://github.com/blue-idea/linkit"
