@@ -17,10 +17,9 @@ cask "linkit" do
   app "Linkit.app"
 
   # 安装后仅清理 Linkit.app 的隔离属性，避免影响其他应用。
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Linkit.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Linkit.app"]
   end
 
   zap trash: [
