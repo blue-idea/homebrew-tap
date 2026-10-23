@@ -1,6 +1,6 @@
 cask "linkit" do
   version "0.4.7"
-  sha256 "20a55401f5ef9023cc4dfd88614f1328f27bc00a235cd3f2bf4b31b1cd0d593e"
+  sha256 "7d75d42883b627f14b4f258f54e391582bba267c2ac0b1779688016e33ea19cd"
 
   url "https://github.com/blue-idea/linkit/releases/download/v#{version}/Linkit.dmg"
   name "Linkit"
