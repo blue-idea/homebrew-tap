@@ -1,23 +1,37 @@
-# Homebrew Tap for Linkit
+# Homebrew Tap for Blue-Idea Projects
 
-This repository distributes the macOS universal build of [Linkit](https://github.com/blue-idea/collection).
+This repository distributes official macOS universal builds for:
+- **BuildUI**: https://github.com/blue-idea/BuildUI
+- **Linkit**: https://github.com/blue-idea/linkit
 
 ## Install
 
-```bash
+```shell
+# Install BuildUI
+brew install blue-idea/tap/buildui
+
+# Install Linkit
 brew install blue-idea/tap/linkit
 ```
 
 ## Upgrade
 
-```bash
+```shell
+# Upgrade BuildUI
+brew upgrade buildui
+
+# Upgrade Linkit
 brew upgrade linkit
 ```
 
 ## Uninstall
 
-```bash
+```shell
+# Uninstall BuildUI
+brew uninstall --cask buildui
+
+# Uninstall Linkit
 brew uninstall --cask linkit
 ```
 
-Linkit is currently distributed without Apple notarization. This third-party Cask removes the `com.apple.quarantine` attribute from the installed `Linkit.app` after installation, without `sudo` and without modifying other applications.
+Applications are distributed without Apple notarization. This third-party tap removes the `com.apple.quarantine` attribute from the installed apps after installation, without `sudo` and without modifying other applications.

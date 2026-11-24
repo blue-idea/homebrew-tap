@@ -24,15 +24,17 @@ jobs:
 
       - name: Validate Cask syntax and style
         run: |
-          ruby -c Casks/linkit.rb
-          brew style Casks/linkit.rb
+          for cask in Casks/*.rb; do
+            ruby -c "$cask"
+            brew style "$cask"
+          done
 
       - name: Install Linkit Cask
         run: |
           brew tap blue-idea/tap
           brew install --cask blue-idea/tap/linkit
 
-      - name: Verify installation and quarantine cleanup
+      - name: Verify Linkit installation and quarantine cleanup
         run: |
           test -d /Applications/Linkit.app
           if xattr -p com.apple.quarantine /Applications/Linkit.app >/dev/null 2>&1; then
@@ -45,4 +47,23 @@ jobs:
         run: |
           if brew list --cask linkit >/dev/null 2>&1; then
             brew uninstall --cask linkit
+          fi
+
+      - name: Install BuildUI Cask
+        run: |
+          brew install --cask blue-idea/tap/buildui
+
+      - name: Verify BuildUI installation and quarantine cleanup
+        run: |
+          test -d /Applications/BuildUI.app
+          if xattr -p com.apple.quarantine /Applications/BuildUI.app >/dev/null 2>&1; then
+            echo "BuildUI.app still has com.apple.quarantine" >&2
+            exit 1
+          fi
+
+      - name: Uninstall BuildUI Cask
+        if: always()
+        run: |
+          if brew list --cask buildui >/dev/null 2>&1; then
+            brew uninstall --cask buildui
           fi
