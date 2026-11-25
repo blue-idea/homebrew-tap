@@ -1,6 +1,6 @@
 cask "buildui" do
-  version "0.1.0"
-  sha256 "cba5e5b1f70963a19715e806883476a06294db6bde22b8eb3ede4dadee5b7ea9"
+  version "0.1.1"
+  sha256 "a5666e806362ec48ae8501c8be3f7fd13575960c6407535f9a44a09edcae4084"
 
   url "https://github.com/blue-idea/BuildUI/releases/download/v#{version}/BuildUI.dmg"
   name "BuildUI"
